@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Vehículos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Vehículos</h1>
+        
+        <form id="registroForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tipoVehiculo">Tipo de Vehículo:</label>
+                    <select id="tipoVehiculo" required>
+                        <option value="coche">Coche</option>
+                        <option value="moto">Moto</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="placas">Placas:</label>
+                    <input type="text" id="placas" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="comentarios">Comentarios:</label>
+                    <input type="text" id="comentarios">
+                </div>
+            </div>
+            
+            <button type="submit" class="btn-primary">Registrar Vehículo</button>
+        </form>
+
+        <h2>Vehículos Registrados</h2>
+        <div class="table-wrapper">
+            <table id="vehiculosTable">
+                <thead>
+                    <tr>
+                        <th>Ficha</th>
+                        <th>Tipo</th>
+                        <th>Placas</th>
+                        <th>Hora Entrada</th>
+                        <th>Costo por Hora</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <h2>Historial de Salidas</h2>
+        <div class="table-wrapper">
+            <table id="historialTable">
+                <thead>
+                    <tr>
+                        <th>Ficha</th>
+                        <th>Tipo</th>
+                        <th>Placas</th>
+                        <th>Fecha Registro</th>
+                        <th>Hora Entrada</th>
+                        <th>Hora Salida</th>
+                        <th>Costo Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="gananciasContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
